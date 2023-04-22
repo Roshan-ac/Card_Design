@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Mulish:wght@700&display=swap');
+
+
+
+
+$bg-color: #173D6A;
+$divider-color: #FDE269;
+$swiperbutton: #2596D0;
+
+
+@font-face {
+    font-family: 'Nexa';
+    src: url("fonts/Nexa.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("fonts/raleway.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url("fonts/Ubuntu.ttf") format("truetype");
+}
+
+
+$primary-font: Nexa;
+$secondary-font: Raleway;
+
+
+@mixin transition-ease {
+    transition: all 0.8s ease-in-out;
+}
+
+$tablet-width: 700px;
+$desktop-width: 1400px;
+
+@mixin media-md {
+    @media screen and (min-width:#{$tablet-width}) and (max-width:#{$desktop-width - 2px}) {
+        @content;
+    }
+}
+
+
+
+@mixin media-lg {
+    @media screen and (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+
+
+.eventCard {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-flow: column;
+
+
+    &_content_box {
+        position: relative;
+        background-color: $bg-color;
+        width: 100vw;
+        min-height: 100vh;
+
+
+
+        @include media-lg {
+            width: 80%;
+            height: max-content;
+            padding-bottom: 50px;
+        }
+
+
+    }
+
+    &_content {
+        display: flex;
+        overflow-x: hidden;
+
+        @include media-lg {
+            &_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &_wrapper {
+            width: 100vw;
+            min-height: 100vh;
+            // transform: translateX(100%);
+
+
+            @include media-lg {
+                position: absolute;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+
+            .text-box {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                @include media-lg {
+                    justify-content: start;
+                    width: 80%;
+                    height: 100%;
+
+
+                }
+
+                &-heading {
+                    text-align: center;
+                    margin-top: 3rem;
+
+                    h1 {
+                        font-size: 22px;
+                        font-family: $primary-font;
+                        color: white;
+                    }
+
+                    span {
+                        display: inline-block;
+                        background-color: $divider-color;
+                        height: 2px;
+                        width: 20rem;
+                    }
+
+                    @include media-lg {
+                        margin-top: 2rem;
+
+                        h1 {
+                            font-size: 32px;
+                        }
+                    }
+                }
+
+                &-slogan {
+                    padding: 15px 30px;
+                    text-align: center;
+
+                    p {
+                        color: white;
+                        font-family: $secondary-font;
+                        line-height: 2rem;
+                        font-size: 18px;
+                    }
+
+                  
+
+                    @include media-lg {
+                        text-align: start;
+                        padding: 10px 60px;
+
+                        p {
+                            margin-top: 3rem;
+                            font-size: 22px;
+                            line-height: 2.5rem;
+
+                        }
+                    }
+                }
+
+              
+
+                @include media-lg {
+                    width: 80%;
+                    height: 100%;
+                }
+            }
+
+            .contentimage {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 80px;
+
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                @include media-md {
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                @include media-lg {
+
+                    img {
+                        width: 847px;
+                        height: 525px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &_button {
+        display: flex;
+        height: 10rem;
+        flex-flow: column;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+        justify-content: center;
+        right: 4rem;
+
+
+        @include media-lg {
+            position: absolute;
+            flex-flow: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            bottom: 0;
+        }
+
+        &_main {
+            margin-top: 40px;
+            width: 13.5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        &_swiper {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            width: 5rem;
+            right: 16rem;
+            margin-top: 30px;
+
+
+            :nth-child(3n+1) {
+                display: inline-block;
+                width: 2rem;
+                height: 0.5rem;
+                background-color: white;
+                border-radius: 5px;
+                background: $swiperbutton;
+                cursor: pointer;
+            }
+
+            :nth-child(3n+2) {
+                display: inline-block;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 100%;
+                background-color: white;
+            }
+
+            :nth-child(3n+3) {
+                display: inline-block;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 100%;
+                background-color: white;
+            }
+        }
+
+        button {
+            background-color: white;
+            height: 60%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            font-family: 'Ubuntu', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+
+            color: #173D6A;
+
+            @include media-md {}
+
+            @include media-lg {
+                font-size: 24px;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+    }
+
+}

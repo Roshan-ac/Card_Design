@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Mulish:wght@700&display=swap");
+@font-face {
+  font-family: "Nexa";
+  src: url("fonts/Nexa.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/raleway.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("fonts/Ubuntu.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.eventCard {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-flow: column;
+}
+.eventCard_content_box {
+  position: relative;
+  background-color: #173D6A;
+  width: 100vw;
+  min-height: 100vh;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_box {
+    width: 80%;
+    height: -moz-max-content;
+    height: max-content;
+    padding-bottom: 50px;
+  }
+}
+.eventCard_content {
+  display: flex;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.eventCard_content_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+.eventCard_content_wrapper .text-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper .text-box {
+    justify-content: start;
+    width: 80%;
+    height: 100%;
+  }
+}
+.eventCard_content_wrapper .text-box-heading {
+  text-align: center;
+  margin-top: 3rem;
+}
+.eventCard_content_wrapper .text-box-heading h1 {
+  font-size: 22px;
+  font-family: Nexa;
+  color: white;
+}
+.eventCard_content_wrapper .text-box-heading span {
+  display: inline-block;
+  background-color: #FDE269;
+  height: 2px;
+  width: 20rem;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper .text-box-heading {
+    margin-top: 2rem;
+  }
+  .eventCard_content_wrapper .text-box-heading h1 {
+    font-size: 32px;
+  }
+}
+.eventCard_content_wrapper .text-box-slogan {
+  padding: 15px 30px;
+  text-align: center;
+}
+.eventCard_content_wrapper .text-box-slogan p {
+  color: white;
+  font-family: Raleway;
+  line-height: 2rem;
+  font-size: 18px;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper .text-box-slogan {
+    text-align: start;
+    padding: 10px 60px;
+  }
+  .eventCard_content_wrapper .text-box-slogan p {
+    margin-top: 3rem;
+    font-size: 22px;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper .text-box {
+    width: 80%;
+    height: 100%;
+  }
+}
+.eventCard_content_wrapper .contentimage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+.eventCard_content_wrapper .contentimage img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (min-width: 700px) and (max-width: 1398px) {
+  .eventCard_content_wrapper .contentimage img {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_content_wrapper .contentimage img {
+    width: 847px;
+    height: 525px;
+  }
+}
+.eventCard_button {
+  display: flex;
+  height: 10rem;
+  flex-flow: column;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  justify-content: center;
+  right: 4rem;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_button {
+    position: absolute;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    bottom: 0;
+  }
+}
+.eventCard_button_main {
+  margin-top: 40px;
+  width: 13.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eventCard_button_swiper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 5rem;
+  right: 16rem;
+  margin-top: 30px;
+}
+.eventCard_button_swiper :nth-child(3n+1) {
+  display: inline-block;
+  width: 2rem;
+  height: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  background: #2596D0;
+  cursor: pointer;
+}
+.eventCard_button_swiper :nth-child(3n+2) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: white;
+}
+.eventCard_button_swiper :nth-child(3n+3) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: white;
+}
+.eventCard_button button {
+  background-color: white;
+  height: 60%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: #173D6A;
+}
+@media screen and (min-width: 1400px) {
+  .eventCard_button button {
+    font-size: 24px;
+    height: 100%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
